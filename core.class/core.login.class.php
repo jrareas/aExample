@@ -78,7 +78,7 @@
 			
 			$viewVars = array('fullName'=>$this->dataLogin['user_first_name'] . " " .$this->dataLogin['user_last_name']
 					,'newPassword' => $newPass
-					,'linkConfirmation'=>"<a href=". $_SERVER['HTTP_ORIGIN'] . "/app/login.php?requestPassConfirmation=" . $newPassCodeRequest . ">". $_SERVER['HTTP_ORIGIN'] . "/app/login.php?requestPassConfirmation=" . $newPassCodeRequest . "</a>"
+					,'linkConfirmation'=>"<a href=http://". $_SERVER['HTTP_HOST'] . "/app/login.php?requestPassConfirmation=" . $newPassCodeRequest . ">http://". $_SERVER['HTTP_HOST'] . "/app/login.php?requestPassConfirmation=" . $newPassCodeRequest . "</a>"
 			);
 			$this->sendMailUser($to,'','Financial System - New Password Request','newpassword','newpassword',$viewVars);
 		}

@@ -27,6 +27,12 @@ class CoreHandleApp{
 	}
 	function logado(){
 		session_start();
-		return $_SESSION['user']['id'] != '';
+		if(isset($_SESSION['user']['id'])){
+			return $_SESSION['user']['id'] != '';
+		}else
+		{
+			return false;
+		}
+		
 	}
 }
