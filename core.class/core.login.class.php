@@ -29,7 +29,7 @@
 			$this->User->save($data);
 		}
 		public function LoginValido(){
-			return (isset($this->dataLogin['id']));
+			return (isset($this->dataLogin['id']) && !isset($this->dataLogin['login_not_valid']));
 		}
 		private function getDataUser($login=true){
 			if(!isset($this->dataLogin['users_user_id']) || ($this->dataLogin['users_user_id'] != $_POST['users_user_id'])){
@@ -39,6 +39,8 @@
 				if($login && ($user_info['user_password'] == sha1($_POST['users_password']))){
 					$datetime = new DateTime();
 					$users_obj->setLastLogin(array('id'=>$user_info['id'],'last_login'=>$datetime->format('Y\-m\-d\ H:i:s')));
+				}else{
+					$this->dataLogin['login_not_valid'] = 1;
 				}
 			}
 			return $this->dataLogin;

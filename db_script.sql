@@ -28,7 +28,6 @@ value('rgoldglass','Richard','Goldglass','Richard Goldglass <richard.goldglass@a
 
 update users set user_password = sha1('1234') where user_id = 'rgoldglass';
 
-create user avid_example identified by 'avid_example';
 
-grant all privileges on avid_example.* to 'avid_example'@'127.0.0.1' identified by 'avid_example';
+select * from users;
 
