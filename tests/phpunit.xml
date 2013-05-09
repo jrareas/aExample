@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         colors="true"
+>
+	<testsuites>
+	  <testsuite name="My Test Suite">
+	    <directory >/Users/jrareas/Developer/php/avidExample/tests/</directory>
+	  </testsuite>
+	</testsuites>
+	<php>
+		<server name="DBTYPE" value="mysql" />
+		<server name="DBHOST" value="127.0.0.1" />
+		<server name="DBUSER" value="avid_example" />
+		<server name="DBPASS" value="avid_example" />
+		<server name="DBNAME" value="avid_example" />
+	</php>
+</phpunit>

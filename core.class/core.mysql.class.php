@@ -16,6 +16,7 @@
 			if(!mysql_select_db($_SERVER['DBNAME'] ,$this->dbHandle )){
 				$this->error[] = mysql_error($this->dbHandle);
 			}
+			return $this->dbHandle != false;
 		}
 		function getNextRow(){
 			if($this->result){

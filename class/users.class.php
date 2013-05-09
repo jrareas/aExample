@@ -1,5 +1,5 @@
 <?php
-require_once(BASE_DIR . '/core.class/core.users.class.php');
+	require_once(BASE_DIR . '/core.class/core.users.class.php');
 	class Users extends CoreUsers{
 		function Users($tableName=''){
 			parent::__construct($tableName);
